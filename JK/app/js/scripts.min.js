@@ -1,6 +1,188 @@
 "use strict";
-import {newFilter, initFilter} from './filter.js';
-import {floor, addLodger} from './lodgers.js';
+//Фильтр по парамтерам
+function newFilter(mansFloor, sex) {
+	let selectItem = document.getElementById('roomsCountFilter');
+	//кол-во комнат
+	let countRooms = selectItem[selectItem.selectedIndex].value;
+
+	//дополнительно
+	let checkbox = document.querySelectorAll('.filter > .checkbox');
+	let extra = [];
+	let j = 0;
+	for(let i = 0; i < checkbox.length;i++)	{
+		if(checkbox[i].checked) {
+			extra[j++] = checkbox[i].value;
+		}
+	}
+	//выбраный этаж
+	let floor = document.getElementById('floorFilter').value;
+	let extraFilter = true, floorFilter = true, countRoomsFilter = true;
+	
+	if(extra.length == 0)
+		extraFilter = false;
+	if(floor == "")
+		floorFilter = false;
+	if(countRooms == 'Выбрать')
+		countRoomsFilter = false;
+
+
+	var filtred = [];
+	for(let i = 0; i < mansFloor.length; i++)	{
+		filtred.push(mansFloor[i].rooms.filter(function(man) {
+			let comparer = 0;
+			for(let k = 0; k < extra.length;k++) {
+				for(let o = 0; o < man.extra.length;o++) {
+					if(extra[k] == man.extra[o]) {
+						comparer++;
+						break;
+					}
+				}
+			}			
+			let result = true;
+			if(extraFilter)
+				result = result && comparer == extra.length;
+			if(floorFilter)
+				result = result && man.floor == floor;
+			if(countRoomsFilter)
+				result = result && man.countRooms == countRooms;
+
+			return man.sex == sex && result;
+		}));
+	}
+	for(let i = 0; i < filtred.length;i++) {
+		let imgs  = document.querySelectorAll('.home__floor' + [i + 1] + ' > .home__floor_window > img');
+		for(let j = 0; j < imgs.length;j++){
+			imgs[j].classList.add('d-none');
+		}
+		for(let j = 0; j < filtred[i].length; j++) {
+			let man = filtred[i][j];
+			imgs[man.indexRoom].classList.remove('d-none');
+		}
+	}
+}
+
+function initFilter() {
+	let reset = document.getElementById('resetFilter');
+	reset.addEventListener('click', function() {
+	let imgs = document.querySelectorAll('.home__floor_window > img');
+
+	for(let i = 0; i < imgs.length;i++)	{
+		imgs[i].classList.remove('d-none');
+	}	
+})
+
+	let name = document.getElementById("name");
+	let spanName = document.getElementById('nameError');
+	name.addEventListener('keyup', function() {
+		if(!name.value.match(/^[A-Za-zА-ЯЁа-яё]+$/)) {
+			name.classList.add('input__error');
+			spanName.classList.add('span__input-error');
+		} else {
+			name.classList.remove('input__error');
+			spanName.classList.remove('span__input-error');
+		}
+	})
+	let floorInput = document.getElementById("floor");
+	let spanFloor = document.getElementById('floorError');
+	floorInput.addEventListener('keyup', function() {
+		if(floorInput.value > 5 || floorInput.value < 1 
+			|| floorInput.value == '' || floorInput.value.match(/^[A-Za-zА-ЯЁа-яё]+$/))	{
+			floorInput.classList.add('input__error');
+			spanFloor.classList.add('span__input-error');
+		}
+		else {
+			floorInput.classList.remove('input__error');
+			spanFloor.classList.remove('span__input-error');
+		}
+	})
+	let roomsInput = document.getElementById("roomsCount");
+	let spanRooms = document.getElementById('roomsError');
+	roomsInput.addEventListener('change', function() {
+		if(roomsInput.value == 'Выбрать')	{
+			roomsInput.classList.add('input__error');
+			spanRooms.classList.add('span__input-error');
+		}
+		else {
+			roomsInput.classList.remove('input__error');
+			spanRooms.classList.remove('span__input-error');
+		}
+	})
+
+	let mansInput = document.getElementById("mansCount");
+	let spanMans = document.getElementById('peopleError');
+	mansInput.addEventListener('change', function() {
+		if(mansInput.value == 'Выбрать') {
+			mansInput.classList.add('input__error');
+			spanMans.classList.add('span__input-error');
+		}
+		else {
+			mansInput.classList.remove('input__error');
+			spanMans.classList.remove('span__input-error');
+		}
+	})
+}
+
+function Man(name,floor,sex,extra,countRooms,people,indexRoom) {
+	return {
+		name: name,
+		floor: floor,
+		sex: sex,
+		extra: extra,
+		countRooms: countRooms,
+		people: people,
+		indexRoom: indexRoom
+	}
+};
+
+function floor() {
+	return {
+		rooms : []
+	}
+}
+
+function addLodger(mansFloor) {
+	let name = document.getElementById("name").value;
+	if(!name.match(/^[A-Za-zА-ЯЁа-яё]+$/)) {
+		return;
+	}
+	let sex = document.getElementById('sexCheck').checked ? ('female') : ('male');
+	let idFloor = document.getElementById("floor").value;
+	if(idFloor > 5 || idFloor < 1 || idFloor == '')	{
+		return;
+	}	
+	let selectItem = document.getElementById('roomsCount');
+	let countRooms = selectItem[selectItem.selectedIndex].value;
+	if(countRooms == 'Выбрать')	{
+		return;
+	}
+	let checkbox = document.querySelectorAll('.new-man > .checkbox');
+	let extra = [];
+	let j = 0;
+	for(let i = 0; i < checkbox.length;i++)	{
+		if(checkbox[i].checked) {
+			extra[j++] = checkbox[i].value;
+		}
+	}
+	selectItem = document.getElementById('mansCount');
+	let people = selectItem[selectItem.selectedIndex].value;
+	if(people == 'Выбрать')	{
+		return;
+	}
+	let floor = mansFloor[5 - idFloor];
+		let index = floor.rooms.length;
+		if(index == 3) {
+			alert("Этаж ЗАНЯТ!");
+			return;
+		}		
+		let floorDivs = document.querySelectorAll('.home__floor'+[6 - idFloor] + '> .home__floor_window');
+		let img = document.createElement('img');
+		img.setAttribute('src','img/' + sex + '.png');
+		img.setAttribute('data-sex', sex);
+		floorDivs[index].appendChild(img);
+
+		floor.rooms[index] = Man(name,idFloor,sex,extra,countRooms,people,index);
+		return mansFloor;
+}
 
 let mansFloor = [];
 initFilter();

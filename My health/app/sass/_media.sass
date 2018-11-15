@@ -1,0 +1,186 @@
+
+// <1600px
+@media only screen and (max-width: 1600px)
+	.experts__statistic
+		width: 600px
+		height: 400px
+// ≥1200px
+@media only screen and (max-width: 1200px)
+	.monitoring__desc
+		img
+			width: 400px
+			height: 400px
+	.menu
+		margin-left: 30px
+	.menu__item
+		margin: 0 4px
+
+// ≥992px
+@media only screen and (max-width: 992px)
+	.header
+		&__logo
+			display: none
+		&__menu
+			margin-left: 5px
+	.pulse
+		display: none
+	.diary
+		width: 100%
+		&__phone
+			display: none
+		&__desc
+			display: flex
+			flex-direction: column
+			align-items: center
+	.monitoring__title
+		width: 80%
+	.functions
+		padding: 50px
+		&__row
+			justify-content: center
+			flex-direction: row
+			flex-wrap: wrap
+		&__col
+			flex-wrap: wrap
+	.monitoring
+		display: flex
+		justify-content: center
+		align-items: center
+		&__title
+			text-align: center
+		&__desc
+			img
+				display: none
+	.experts__statistic
+		display: none
+	.experts
+		justify-content: center
+		align-items: center
+	.request
+		&__title
+			width: 80%
+			text-align: center
+	.footer
+		&__wrap
+			&:after
+				width: 50%
+		&__logo
+			display: none
+		&__menu
+			margin: 0
+			ul
+				margin: 0
+				li
+					white-space: nowrap
+					margin: 0 10px
+// ≥768px
+@media only screen and (max-width: 768px)
+	.header
+		padding-top: 0
+		&__top
+			padding-top: 0
+	.header__content
+		width: 95%
+	.content__title
+		margin-top: 0
+	.monitoring__item
+		width: 70%
+		&:before
+			display: none
+	.functions
+		padding: 100px 0
+// ≥576px
+@media only screen and (max-width: 576px)
+	.menu
+		display: flex
+		flex-direction: column
+		position: fixed
+		margin-left: 0
+		right: -220px
+		top: 0
+		padding: 10px 0 0 10px
+		background-color: rgba(0,0,0, .9)
+		z-index: 1
+		transition: all .3s
+		&__item
+			display: block
+			height: 70px
+			width: 200px
+			text-align: center
+			&:first-child
+				padding-top: 10px
+			&:last-child
+				padding-bottom: 10px
+		&__item-btn
+			display: none
+	.mobile__btn
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 75px
+		height: 75px
+		position: absolute
+		top: 0
+		left: -75px
+		background-color: #317db7
+		box-shadow: 0px 0px 7px 3px rgba(255,255,255,0.2);
+		transition: all .3s
+		&_x
+			display: block
+			height: 2px
+			width: 50px
+			background-color: #fff
+			position: absolute
+			transform: translateX(-50%)
+			box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.75);
+			transition: all .3s
+			&:after
+				content: ''
+				display: block
+				height: 2px
+				width: 50px
+				background-color: #fff
+				position: absolute
+				transform: translateY(-10px)
+				box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.75);
+				transition: all .3s
+			&:before
+				content: ''
+				display: block
+				height: 2px
+				width: 50px
+				background-color: #fff
+				position: absolute
+				transform: translateY(10px)
+				box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.75);
+				transition: all .3s
+	.mobile__btn_active
+		background-color: rgba(0,0,0, .9)
+		transition: all .3s
+	.mobile__btn_x_active
+		height: 0px		
+		box-shadow: 0px 0px 0px 0px
+		transition: all .3s
+		&:after
+			content: ''
+			display: block
+			height: 2px
+			width: 50px
+			background-color: #fff
+			position: absolute
+			transform: rotate(-40deg)
+			z-index: 1
+			transition: all .3s
+		&:before
+			content: ''
+			display: block
+			height: 2px
+			width: 50px
+			background-color: #fff
+			position: absolute
+			transform: rotate(40deg)
+			z-index: 1
+			transition: all .3s
+	.menu_active
+		right: 0
+		transition: all .3s

@@ -1,0 +1,129 @@
+.header
+	font-size: 50px
+	min-height: 751px
+	background: url(../img/header-img.jpg) no-repeat center center
+	background-color: #fafaff;
+	display: flex
+	flex-direction: column
+	align-items: center
+	transition: all .2s
+	position: relative
+	&__top
+		display: flex
+		margin: 22px 380px 0px 380px
+		align-items: center
+	&__logo
+		display: block
+		height: 40px
+		width: 200px
+		margin-top: 4px
+		cursor: pointer
+	&__content
+		display: flex
+		flex-direction: column
+	&_active
+		background: url(../img/header-img2.jpg) no-repeat center center
+		transition: all .2s
+.menu
+	display: flex
+	justify-content: center
+	align-items: center
+	font-size: 16px
+	color: #fdfffc;
+	margin-left: 174px
+	font-weight: bold
+	white-space: nowrap
+	li
+		list-style-type: none
+	&__item 
+		text-decoration: none
+		color: #fff
+		margin: -7px 26px
+		margin-left: 24px
+		position: relative
+		cursor: pointer
+		&:hover
+			&:after
+				opacity: 1
+		&:after
+			content: ''
+			display: block
+			transition: all .2s
+			position: absolute
+			opacity: 0
+			border-radius: 50%
+			background-color: #fff
+			height: 6px
+			width: 6px
+			left: 50%
+			transform: translateX(-50%)
+	&__item-btn
+		display: block		
+		color: #ffffff
+		text-decoration: none
+		margin-left: 48px
+		padding: 14px 33px;
+		border-radius: 30px;
+		border: 2px solid #5489c3
+		&:hover
+			transition: all .2s
+			background-color: lighten(#327db7, 10%)
+.content
+	color: #fff
+	width: 750px
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: 42px
+	position: relative
+	&__wrap
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		min-height: 435px
+		&_hidden
+			display: none
+	&__title
+		font-size: 36px
+		line-height: 54px
+		text-align: center
+		margin-bottom: 10px
+	&__desc
+		text-align: center
+		font-size: 24px
+		line-height: 36px
+		margin-left: 2px
+		margin-bottom: 47px
+	&__btn
+		font-size: 16px
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 180px
+		height: 60px
+		border-radius: 30px
+		background-color: #e70067
+		text-decoration: none
+		color: #fff
+	&__sliderBtn
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 72px
+		height: 16px
+		border-radius: 8px
+		border: 1px solid #5489c3
+		margin-top: 147px
+		margin-left: 9px
+		.toggle 
+			display: block
+			width: 16px
+			height: 1px
+			background-color: #5489c3
+			margin: 0px 4px
+			transition: all .3s
+			&_active
+				background-color: #fff
+.mobile__btn
+	display: none

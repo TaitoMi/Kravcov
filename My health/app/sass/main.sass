@@ -1,0 +1,44 @@
+@import "../libs/normalize.css"
+@import "fonts"
+@import "blocks/header"
+@import "blocks/diaryofhealth"
+@import "blocks/functions"
+@import "blocks/monitoring"
+@import "blocks/experts"
+@import "blocks/request"
+@import "blocks/footer"
+
+html 
+	scroll-behavior: smooth
+
+body
+	height: 8000px
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	overflow-x: hidden
+	font-family: 'Cera'
+	font-weight: normal
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.container-fluid
+	width: 100%
+	margin-right: auto
+	margin-left: auto
+
+.container
+	width: 100%
+	max-width: 1140px
+	padding-right: 15px
+	padding-left: 15px
+	margin-right: auto
+	margin-left: auto
+
+@import "media" // Always at the end

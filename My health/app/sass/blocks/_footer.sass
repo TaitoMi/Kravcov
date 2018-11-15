@@ -1,0 +1,43 @@
+.footer
+	background-color: #39649d
+	min-height: 215px
+	display: flex
+	flex-direction: column
+	justify-content: space-around
+	align-items: center
+	padding: 25px
+	color: #e3e7f2
+	&__logo
+		display: block
+		width: 160px
+		margin-left: -20px
+	&__wrap
+		margin-top: -3px
+		display: flex
+		align-items: center
+		justify-content: space-around
+		position: relative
+		&:after
+			content: ''
+			display: block
+			height: 2px
+			width: 100%
+			position: absolute
+			background-color: #335b91
+			top: 90px
+	&__menu
+		color: #fff	
+		margin-left: 191px	
+		ul
+			padding: 0
+			display: flex
+			li
+				margin: 0px 35px
+				list-style-type: none
+				a
+					text-decoration: none
+					color: #fff
+	&__link
+		a
+			text-decoration: none
+			color: lighten(#e70067, 5%)

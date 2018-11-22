@@ -1,0 +1,51 @@
+#canvas {
+	display: block;
+	margin: auto;
+	background-color: #dee4ed;
+}
+.colorpick {
+	display: flex;
+	height: 20px;
+	justify-content: center;
+	margin-bottom: 25px;
+}
+span {
+	display: block;
+	width: 45px;
+	height: 25px;
+	margin: 0 5px;
+}
+p {
+	text-align: center;
+}
+.black {
+	background-color: black;
+}
+.red {
+	background-color: red;
+}
+.orange {
+	background-color: orange;
+}
+.yellow {
+	background-color: yellow;
+}
+.green {
+	background-color: green;
+}
+.lightblue {
+	background-color: lightblue;
+}
+.blue {
+	background-color: blue;
+}
+.purple {
+	background-color: purple;
+}
+.current { 
+	position: fixed;
+	top: 15px;
+	left: 15px;
+	display: flex;
+	align-items: center;
+}

@@ -1,0 +1,42 @@
+.header
+	display: flex
+	justify-content: space-between
+	background-color: #f8f8f8
+	padding-top: 31px
+	font-size: 21px
+	&__nav
+		margin-left: 185px
+		span
+			display: none
+		ul
+			margin: 0
+			display: flex
+			li
+				list-style-type: none
+				padding: 0 15px 0
+				padding-bottom: 12px
+				a
+					text-decoration: none
+					color: #7d7d7d
+	&__search
+		box-sizing: border-box
+		width: 341px
+		margin-right: 218px
+		background-color: transparent
+		padding: 0px 33px 10px 33px
+		border: none
+		border-bottom: 3px solid #d8dadb
+		background: url(../img/untitled.svg) no-repeat
+		background-position: -11px -53px
+		&:hover
+			background-position: -11px 2px
+			border-bottom: 3px solid #42b6e2
+		&:focus
+			background-position: -11px 2px
+			border-bottom: 3px solid #42b6e2
+.nav
+	&__item
+		&:hover
+			border-bottom: 3px solid #d4d6d8
+		&_active
+			border-bottom: 3px solid #fc3035

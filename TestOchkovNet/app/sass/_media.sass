@@ -1,0 +1,133 @@
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
+
+// ≥992px
+
+// ≥768px
+// >640
+@media only screen and (max-width: 644px)
+	.header 
+		padding: 0
+		margin: 0
+		flex-direction: column-reverse
+		justify-content: flex-end
+		align-items: center
+		height: 261px
+		&__search
+			box-sizing: border-box
+			margin: 0			
+			background-color: #fff
+			margin-top: 40px
+			margin-left: 15px
+			border: 2px solid #dadcdd
+			border-radius: 7px
+			height: 78px
+			width: 480px
+			font-size: 35px
+			padding: 15px 65px
+			background-size: 900px
+			background-position: -20px -119px
+			&:hover
+				background-position: -20px 5px
+			&:focus
+				background-position: -20px 5px
+
+		&__nav
+			margin: 0
+			margin-top: 70px
+			font-size: 35px
+			.mobClick
+				width: 69px
+				height: 69px
+				border: 1px solid black
+				background-color: darken(white, 10%)
+				position: absolute
+				top: 0
+				right: -69px
+				span
+					display: block
+					position: absolute
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					height: 2px
+					width: 45px
+					background-color: #fff
+					box-shadow: 0 0 1px 1px
+					transition: all .3s
+					&:after
+						content: ''	
+						display: block					
+						height: 2px
+						width: 45px
+						background-color: #fff
+						box-shadow: 0 0 1px 1px
+						transform: translateY(10px)
+					&:before
+						content: ''	
+						display: block					
+						height: 2px
+						width: 45px
+						background-color: #fff
+						box-shadow: 0 0 1px 1px
+						transform: translateY(-10px)
+				.span_active
+					height: 0
+					box-shadow: 0 0 0px 0px
+					transition: all .2s
+					&:after
+						content: ''	
+						display: block					
+						height: 2px
+						width: 45px
+						background-color: #fff
+						box-shadow: 0 0 1px 1px
+						transform: rotate(-45deg) translate(1px)
+					&:before
+						content: ''	
+						display: block					
+						height: 2px
+						width: 45px
+						background-color: #fff
+						box-shadow: 0 0 1px 1px
+						transform: rotate(45deg) translate(1px)
+
+			.mobMenu
+				display: flex
+				flex-direction: column
+				position: fixed
+				padding: 0
+				width: 80%
+				left: -497px
+				transition: all .2s
+				text-align: center
+				&_active
+					left: 0
+				li
+					background-color: darken(white, 10%)
+	.products
+		&__item
+			width: 600px
+			height: 435px
+			img
+				max-height: 250px
+				max-width: 350px
+		&__desc
+			font-size: 35px
+			height: 130px
+			padding: 40px 0
+// ≥576px
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
+
+// ≤768px
+
+// ≤992px
+
+// ≤1200px

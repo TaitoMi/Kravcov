@@ -2,12 +2,121 @@
 
 /*==========  Desktop First  ==========*/
 
-// ≥1200px
-
+// ≥1201px
+@media only screen and (max-width: 1201px)
+	html
+		font-size: 8px
 // ≥992px
+@media only screen and (max-width: 992px)
+	.header-content__btn-form
+		margin-left: 30rem
+	.mob-link
+		display: block
+		z-index: 2
+		padding-bottom: 1rem
+		padding-right: 2rem
+		align-self: center
+		span
+			display: block
+			height: 2px
+			width: 35px
+			background-color: #000
+			position: relative
+			transition: all .2s			
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				transform: translateY(-1rem)
+				height: 2px
+				width: 35px
+				background-color: #000
+				transition: all .2s
+			&:after
+				content: ''
+				display: block
+				position: absolute				
+				transform: translateY(1rem) 
+				height: 2px
+				width: 35px
+				background-color: #000
+				transition: all .2s
+	.mob-link_active
+		span
+			height: 0
+			&:before
+				transform: rotate(-45deg)
+			&:after
+				transform: rotate(45deg)
+	.header-content__menu
+		position: fixed
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		z-index: 1
+		right: -210vw
+		top: 9.5rem
+		bottom: 0
+		background-color: #fff
+		padding: 0
+		margin: 0
+		font-size: 10rem
+		transition: all .5s
+	.header-content__menu_active
+		right: 0
+		left: 0
+		transition: all .5s
+	.main-content
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		&__news-img
+			padding-bottom: 5rem
+	.buy__item
+		flex-wrap: wrap
+	.container
+		width: 600px
+	.menu__copyright
+		position: absolute
+		bottom: 3.5rem
+		display: block
+	.buy__item
+		width: 40%
+		margin-bottom: 2rem
+	.buy-content
+		flex-wrap: wrap
+		justify-content: center
+		align-items: center
+	.block-form
+		.container
+			flex-direction: column
+			justify-content: center
+			align-items: center
+
 
 // ≥768px
-
+@media only screen and (max-width: 769px)
+	.container
+		width: 100%
+	.main-content__news-img
+		padding: 0
+		img
+			width: 95vw
+	.header-content__btn-form
+		margin-left: 20%
+	.buy__item
+		width: 100%
+	.block-form
+		padding: 0
+		width: 100%
+		.container
+			.form
+				justify-content: center
+				align-items: center
+				input
+					width: 100%
+		&__list
+			max-width: 100%
 // ≥576px
 
 

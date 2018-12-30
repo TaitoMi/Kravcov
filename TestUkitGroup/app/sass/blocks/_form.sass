@@ -1,0 +1,103 @@
+.block-form
+	padding-top: 8rem
+	padding-bottom: 10rem
+	.container
+		justify-content: flex-end
+		padding-right: 2rem
+		.back
+			position: absolute
+			top: 1rem
+			left: -30rem
+			font-family: 'PT Sans'
+			font-size: 1.6rem
+			color: lighten(#263238, 40%)
+			font-weight: bold
+
+	.form
+		display: flex
+		flex-direction: column
+		color: #263238
+		position: relative
+		label
+			display: block
+			position: absolute
+			text-transform: uppercase
+			font-family: 'PT Sans'
+			font-size: 1.4rem
+			font-weight: bold
+			color: lighten(#263238, 40%)
+			left: 2rem
+		.name			
+			top: 9.6rem
+			&_p
+				width: 40rem
+		.email
+			top: 15.5rem
+		.message
+			top: 22rem
+			&_p
+				width: 40rem
+		
+		h2
+			font-family: 'PT Serif'
+			font-size: 4rem
+			padding-bottom: 3.1rem
+		input
+			position: relative
+			background-color: #E6EAEB
+			outline: none
+			border: none
+			width: 40rem
+			height: 5rem
+			font-family: 'PT Sans'
+			font-size: 1.6rem
+			color: #263238
+			margin-bottom: 1.2rem
+			border-radius: 3px
+			&:focus + label
+				transition: all .2s
+				font-size: .9rem
+				margin-top: -10px
+		textarea
+			display: block
+			width: 56rem
+			height: 15rem
+			color: #263238
+			outline: none
+			border: none
+			border-radius: 3px
+			background-color: #E6EAEB
+			position: relative			
+			&:focus + label
+				transition: all .2s
+				font-size: 9px
+				margin-top: -10px
+		button
+			width: 14rem
+			height: 5rem
+			background-color: #4BAE4F
+			border: none
+			margin-top: 2.8rem
+			border-radius: 5px
+			color: #fff
+			font-family: 'PT Sans'
+			font-weight: bold
+			font-size: 1.7rem
+	&__list
+		padding-top: 7.4rem
+		padding-left: 4rem
+		max-width: 30rem
+		span
+			font-family: 'PT Sans'
+			font-size: 1.6rem
+			font-weight: bold
+			color: #4BAE4F
+			padding-right: 1rem
+			position: absolute
+			left: -2rem
+		li
+			position: relative
+			font-family: 'PT Sans'
+			font-size: 1.6rem
+			line-height: 2rem
+			padding-bottom: 1.3rem

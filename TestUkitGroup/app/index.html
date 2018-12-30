@@ -9,16 +9,105 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="icon" href="img/favicon/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
 
+<div class="overlay"></div>
+<header class="header">
 	<div class="container">
-		Hello
+		<div class="header-content">
+				<a href="#"><img src="img/logo.png" alt="" class="header-content__logo"></a>
+				<ul class="header-content__menu menu">
+					<li><a href="#" class="menu__item">Главная</a></li>
+					<li><a href="#" class="menu__item">Компания</a></li>
+					<li><a href="#" class="menu__item">Новости</a></li>
+					<li><a href="#" class="menu__item">Услуги</a></li>
+					<li><a href="#" class="menu__item">Контакты</a></li>
+					<p class="menu__copyright">&copy; 2016 uKit</p>
+				</ul>
+				<a href="form.html" class="header-content__btn-form">Заполнить форму</a>
+				<a href="#" class="mob-link"><span></span></a>
+		</div>
 	</div>
-
-	<script src="js/scripts.min.js"></script>
+</header>
+<section class="main">
+	<div class="container">
+		<div class="main-content">
+			<div class="main-content__news-img">
+				<img src="../img/1.jpg" alt="Картинка Новости">
+				<p>В короткий список слов года также вошли ad blocker (блокировщик рекламы)</p>
+			</div>
+			<div class="main-content__news-desc">
+				<h2>Названо «слово года» по версии Оксфордских словарей</h2>
+				<h4>В 2015 году словом года по версии составителей Оксфордских словарей стала пиктограмма, эмодзи под названием «Лицо со слезами радости».</h4>
+				<p>Составители провели исследование вместе со SwiftKey о частоте использования разных эмодзи в интернете. «Лицо со слезами радости» оказалось самым популярным эмодзи в 2015 году. Например, в США он составил 17% от всех написанных эмодзи, а в Великобритании — 20%. <br>
+						Кроме того, слово emoji, которое есть в английском с 1997 года, в 2015 году стало употребляться примерно в три раза чаще.</p>
+				<span>В короткий список слов года также вошли ad blocker («блокировщик рекламы»), brexit (возможный выход Великобритании из состава Европейского союза), dark web (сегмент интернета, доступный через браузер Tor).</span>
+				<a href="form.html" >Заполнить форму</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="buy">
+	<div class="container">
+		<div class="buy-content">
+			<div class="buy__item">
+				<h3>Слово года</h3>
+				<p>Слово emoji стало употребляться примерно в три раза чаще</p>
+				<span>$59</span>
+				<a href="#">Купить</a>
+			</div>
+			<div class="buy__item">
+				<h3>Лицо со слезами радости</h3>
+				<p>В 2015 году словом года по версии составителей Оксфордских словарей стала пиктограмма</p>
+				<span>$112</span>
+				<a href="#">Купить</a>
+			</div>
+			<div class="buy__item">
+				<h3>Оксфордский словарь</h3>
+				<p>Исследование вместо со SwiftKey о частоте использования разных эмодзи в интернете</p>
+				<span>$83</span>
+				<a href="#">Купить</a>
+			</div>
+			<div class="buy__item">
+				<h3>SwiftKey</h3>
+				<p>«Лицо со слезами радости» оказалось самым популярным эмодзи в 2015 году</p>
+				<span>$9</span>
+				<a href="#">Купить</a>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="block-form">
+	<div class="container">
+		<form action="#" class="form">
+			<h2>Заполните форму</h2>
+			<input id="name" type="text" >
+			<label for="name" class="name">Имя</label>
+			<input id="email" type="text" >
+			<label for="email" class="email">Почта</label>
+			<textarea name="" id="message" cols="30" rows="10"></textarea>
+			<label for="message" class="message">Сообщение</label>
+			<button>Отправить</button>
+		</form>
+		<ul class="block-form__list">
+			<li><span>1</span>Составители провели исследование вместе со SwiftKey</li>
+			<li><span>2</span>«Лицо со слезами радости» оказалось самым популярным эмодзи в 2015 году.</li>
+			<li><span>3</span>В США он составил 17% от всех написанных эмодзи</li>
+			<li><span>4</span>В Великобритании — 20%</li>
+			<li><span>5</span>Слово emoji стало употребляться примерно в три раза чаще</li>
+		</ul>
+	</div>
+</section>
+<footer class="footer">
+	<div class="container">
+			<p class="footer__copyright">&copy; 2016 uKit</p>
+	</div>
+</footer>
+<script src="js/scripts.min.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,76 @@
+.experience {
+	margin-top: 20.5vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__title {		
+		font-size: 3rem;
+		font-weight: 300;
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 47px;
+			height: 47px;
+			top: -130%;
+			left: 49%;
+			transform: translate(-50%, -50%);
+			background: url('../../../images/experience.svg');
+		}
+
+	}
+	&__cols {
+		display: flex;
+		margin-top: 5vh;
+		font-weight: 300;
+		font-size: 1.6rem;
+		justify-content: center;
+		width: 100%;
+		margin-right: 46px;
+	}
+	&__col {
+		display: flex;
+		flex-direction: column;
+		margin: 0 60px;
+		label {
+			margin: 9px 0px;
+			position: relative;
+			input {
+				width: 0;
+				height: 0;
+				opacity: 0;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				border: 1px solid #435993;
+				border-radius: 2px;
+				left: -33px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				width: 6px;
+				height: 12px;
+				border-right: 2px solid #435993;
+				border-bottom: 2px solid #435993;
+				border-radius: 2px;
+				left: -33px;
+				top: 50%;
+				display: none;
+				transform: translateY(-62%) translateX(92%) rotate(45deg);
+			}
+		}
+		label.active {
+			&:after {
+				display: block;
+			}
+		}
+	}
+}

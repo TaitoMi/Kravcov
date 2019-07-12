@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<script type="text/javascript" src="assets/js/script.js" defer></script>
+</head>
+<body>
+	<nav class="header">
+		<a href="#" class="header__mobBtn"> <span class="header__lines"></span> </a>
+		<ul class="header__menu">
+			<li class="header__item"><a href="#profile">Личная информация</a></li>
+			<li class="header__item"><a href="#experience">Опыт</a></li>
+			<li class="header__item"><a href="#js">JavaScript</a></li>
+			<li class="header__item"><a href="#about">О себе</a></li>
+		</ul>
+	</nav>
+	<form action="#">
+		<section class="profile" id="profile">
+			<div class="profile__bg"></div>		
+			<h1 class="profile__title">Анкета</h1>
+			<h3 class="profile__subtitle">Личная информация</h3>
+			<input class="profile__fio" type="text" placeholder="Кравцов Иван Андреевич">
+			<div class="profile__year year" data-value="1996" type="select">
+				<span>1996</span>
+				<div class="year__options">
+				</div>
+				<a class="year__btn"> <span></span></a>
+			</div>
+			<input class="profile__adress" type="text" placeholder="Ростовская обл. г. Шахты">
+			<input class="profile__skype" type="text" placeholder="Skype - gfDaker">
+			<input class="profile__email" type="text" placeholder="E-mail - gfdaker96@gmail.com">
+		</section>
+		<section class="experience" id="experience">
+			<h3 class="experience__title">
+				Расскажите о своем опыте
+			</h3>
+			<div class="experience__cols">
+					<div class="experience__col experience__col-1">
+							<label for="check1"><input type="checkbox" checked id="check1">БЭМ/OOCSS</label>
+							<label for="check2"><input type="checkbox" checked id="check2">Stylus/LESS/SASS</label>
+							<label for="check3"><input type="checkbox" checked id="check3">Работаю с SVG</label>
+						</div>
+						<div class="experience__col experience__col-2">
+							<label for="check4"><input type="checkbox" checked id="check4">Верстаю семантично</label>
+							<label for="check5"><input type="checkbox" checked id="check5">ES2015/ES2016</label>
+							<label for="check6"><input type="checkbox" checked id="check6">Gulp/Grunt</label>
+						</div>
+						<div class="experience__col experience__col-3">
+							<label for="check7"><input type="checkbox" id="check7">Webpack</label>
+							<label for="check8"><input type="checkbox" checked id="check8">jQuery</label>
+							<label for="check9"><input type="checkbox" checked id="check9">Использую Git</label>
+						</div>
+			</div>
+		</section>
+		<section class="js" id="js">
+			<h3 class="js__title">Уровень владения JavaScript</h3>
+			<div class="js__levels">
+				<div class="js__level js__level-1">Не владею</div>
+				<div class="js__level js__level-2">Использую готовые решения</div>
+				<div class="js__level js__level-3">Использую готовые решения и умею переделывать</div>
+				<div class="js__level js__level-4">Пишу сложны JS с нуля</div>
+				<div class="js__triangle"></div>
+			</div>
+			<input type="range" min="0"  max="100" value="65" class="js__range" oninput="range()">
+			
+		</section>
+
+		<section class="about" id="about">
+			<h3 class="about__title">Расскажите о себе</h3>
+			<h4 class="about__subtitle">Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.</h4>
+			<textarea class="about__text" name="aboutText" id="aboutText" cols="30" rows="10"> Меня зовут Иван, мне нравится заниматься вёрсткой и программированием, интересно изучать что-то на первый взгляд "не понятное" и разбираться в этом.
+ Вакансия привлекла обещанием крупных проектов. И зарплатой естественно).
+ Ожидаю интересной и продуктивной работы, так же развития себя как специалиста в сфере которая мне нравится.
+			</textarea>
+			<button class="about__btn">Готово</button>
+		</section>
+	</form>
+	
+	<div class="overlay"></div>
+</body>
+</html>
